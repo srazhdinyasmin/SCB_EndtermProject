@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Crumb Bakery | Order</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg bakery-navbar">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Sweet Crumb Bakery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="order.html" aria-current="page">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><button id="theme-toggle" type="button" class="btn btn-outline-light btn-sm">🌙 Night</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="order-form-section" class="section">
+    <div class="container">
+      <div class="row g-4">
+        <aside class="col-lg-4">
+          <div class="order-sidebar h-100">
+            <h2>Order Guide</h2>
+            <ul class="list-unstyled">
+              <li><a href="#order-form-section">Place an Order</a></li>
+              <li><a href="#order-info">Order Information</a></li>
+            </ul>
+            <div class="order-guide-note">Fill out the form to request your favorite bakery products.</div>
+          </div>
+        </aside>
+
+        <div class="col-lg-8">
+          <h1>Place Your Order</h1>
+          <img src="images/order.jpg" class="img-fluid order-feature-image" alt="Banana cream cake">
+          <p class="mt-3">Choose your favorite product and tell us about your order.</p>
+
+          <!-- Task 6: Spinner / Task 7: Toast -->
+          <form id="order-form" class="bakery-form" novalidate>
+            <div class="mb-3">
+              <label for="order-name" class="form-label">Name</label>
+              <input id="order-name" name="name" class="form-control" type="text">
+              <div id="name-error" class="validation-message"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="order-email" class="form-label">Email</label>
+              <input id="order-email" name="email" class="form-control" type="email">
+              <div id="email-error" class="validation-message"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="product" class="form-label">Select Product</label>
+              <select id="product" name="product" class="form-select">
+                <option value="">Select a product</option>
+                <option value="Butter Croissant">Butter Croissant</option>
+                <option value="Cinnamon Roll">Cinnamon Roll</option>
+                <option value="Sourdough Bread">Sourdough Bread</option>
+                <option value="Chocolate Cake">Chocolate Cake</option>
+                <option value="Blueberry Muffin">Blueberry Muffin</option>
+                <option value="Whole Wheat Loaf">Whole Wheat Loaf</option>
+              </select>
+              <div id="product-error" class="validation-message"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="color" class="form-label">Preferred Decoration Color</label>
+              <input id="color" name="color" class="form-control form-control-color" type="color" value="#9b5d3e">
+            </div>
+
+            <div class="mb-3">
+              <label for="details" class="form-label">Order Details</label>
+              <textarea id="details" name="details" class="form-control" rows="5"></textarea>
+              <div id="details-error" class="validation-message"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="order-password" class="form-label">Password</label>
+              <input id="order-password" name="password" class="form-control" type="password" autocomplete="new-password">
+              <div class="form-text">Password must be at least 8 characters and contain a number.</div>
+              <div id="password-error" class="validation-message"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="confirm-password" class="form-label">Confirm Password</label>
+              <input id="confirm-password" name="confirmPassword" class="form-control" type="password" autocomplete="new-password">
+              <div id="confirm-password-error" class="validation-message"></div>
+            </div>
+
+            <div id="order-success" class="alert alert-success" role="status" hidden></div>
+            <button id="orderSubmitBtn" type="submit" class="btn btn-primary">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order-info" class="section bg-light-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Why Order From Us?</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><article class="card h-100"><div class="card-body"><h3>Fresh Products</h3><p>Our bakery products are prepared fresh every day.</p></div></article></div>
+        <div class="col-md-4"><article class="card h-100"><div class="card-body"><h3>Custom Orders</h3><p>We can customize cakes and other bakery products.</p></div></article></div>
+        <div class="col-md-4"><article class="card h-100"><div class="card-body"><h3>Easy Ordering</h3><p>Simply complete the form and send us your request.</p></div></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="team-box">
+        <h2>About the Team Member</h2>
+        <h3>URINBAY NURGUL</h3>
+        <p>I was responsible for the Order and Contact pages. My work included the order form, contact form, buttons, contact information and form styling.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <p><strong>Sweet Crumb Bakery Team</strong></p>
+    <p>NURLANKYZY ZHANSHUAK | SRAZHDIN YASMIN | URINBAY NURGUL</p>
+    <p>Front-End Development — Assignment 6</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

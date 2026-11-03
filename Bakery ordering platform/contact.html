@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Crumb Bakery | Contact</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg bakery-navbar">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Sweet Crumb Bakery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+          <li class="nav-item"><button id="theme-toggle" type="button" class="btn btn-outline-light btn-sm">🌙 Night</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <img src="images/contact.jpg" class="img-fluid contact-banner mb-4" alt="Sweet Crumb Bakery interior">
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="card contact-card h-100">
+            <img src="images/address.png" class="card-img-top" alt="Bakery location" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h3>Address</h3>
+              <p>Astana, Kazakhstan</p>
+              <a href="#contact-section" class="btn btn-primary mt-auto">Contact Us</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card contact-card h-100">
+            <img src="images/hours.png" class="card-img-top" alt="Opening hours" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h3>Opening Hours</h3>
+              <p>Monday – Friday: 8:00 – 20:00</p>
+              <p>Saturday – Sunday: 9:00 – 21:00</p>
+              <a href="#contact-section" class="btn btn-primary mt-auto">Contact Us</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card contact-card h-100">
+            <img src="images/email.png" class="card-img-top" alt="Email" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h3>Email</h3>
+              <p id="bakeryEmail">bakery@example.com</p>
+
+              <!-- Task 8: Copy to Clipboard -->
+              <button id="copyEmailBtn" type="button" class="btn btn-outline-secondary btn-sm mb-2" title="Copy email address">📋 Copy Email</button>
+              <span id="copyEmailTooltip" class="copy-tooltip" role="status" aria-live="polite"></span>
+
+              <a href="#contact-section" class="btn btn-primary mt-auto">Contact Us</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-section" class="section bg-light-section">
+    <div class="container">
+      <h2>Send Us a Message</h2>
+
+      <!-- Task 6: Loading Spinner -->
+      <!-- Task 7: Toast Notification -->
+      <form id="contact-form" class="bakery-form" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input id="name" name="name" type="text" class="form-control">
+          <small id="contact-name-error" class="validation-message"></small>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" type="email" class="form-control">
+          <small id="contact-email-error" class="validation-message"></small>
+        </div>
+
+        <div class="mb-3">
+          <label for="reason" class="form-label">Contact Reason</label>
+          <select id="reason" name="reason" class="form-select">
+            <option value="">Select a reason</option>
+            <option value="order">Order Question</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-control" rows="5"></textarea>
+          <small id="contact-message-error" class="validation-message"></small>
+        </div>
+
+        <div id="contact-success" class="alert alert-success" role="status" hidden></div>
+        <button id="contactSubmitBtn" type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="team-box">
+        <h2>About the Team Member</h2>
+        <h3>URINBAY NURGUL</h3>
+        <p>I was responsible for the Order and Contact pages. My work included the order form, contact form, buttons, contact information and form styling.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <p><strong>Sweet Crumb Bakery Team</strong></p>
+    <p>NURLANKYZY ZHANSHUAK | SRAZHDIN YASMIN | URINBAY NURGUL</p>
+    <p>Front-End Development — Assignment 6</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

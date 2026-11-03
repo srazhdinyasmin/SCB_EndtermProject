@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Crumb Bakery | Menu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg bakery-navbar">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">Sweet Crumb Bakery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html" aria-current="page">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><button id="theme-toggle" type="button" class="btn btn-outline-light btn-sm">🌙 Night</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1>Our Bakery Menu</h1>
+          <p class="fs-5">Discover our selection of freshly baked breads, pastries, cakes and desserts.</p>
+          <a href="order.html" class="btn btn-primary mt-3">Order Now</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="images/menu.jpg" class="img-fluid hero-photo" alt="Bakery pastry display">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light-section">
+    <div class="container">
+      <h2 class="text-center">Our Products</h2>
+      <p class="text-center mb-4">Filter products by category or use live search.</p>
+
+      <!-- Task 1: Real-time Search -->
+      <!-- Task 2: Autocomplete -->
+      <!-- Task 3: Highlighting -->
+      <div class="bakery-search-area mx-auto mb-4">
+        <label for="searchInput" class="form-label fw-bold">Search Bakery Products</label>
+        <input id="searchInput" class="form-control" type="search"
+          placeholder="Search croissant, bread, cake..." autocomplete="off"
+          aria-controls="suggestions">
+        <div id="suggestions" class="bakery-suggestions" role="listbox"></div>
+        <p id="searchCount" class="mt-2" aria-live="polite"></p>
+      </div>
+
+      <div class="filter-buttons text-center mb-4">
+        <button class="btn btn-primary active" type="button" data-filter="all">All</button>
+        <button class="btn btn-outline-secondary" type="button" data-filter="pastry">Pastries</button>
+        <button class="btn btn-outline-secondary" type="button" data-filter="bread">Bread</button>
+        <button class="btn btn-outline-secondary" type="button" data-filter="cake">Cakes</button>
+      </div>
+
+      <div id="product-list" class="row g-4">
+        <!-- Six products created by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Price Table</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Croissant</td><td>Pastry</td><td>1,200 KZT</td><td>Daily</td></tr>
+            <tr><td>Sourdough Bread</td><td>Bread</td><td>1,800 KZT</td><td>Daily</td></tr>
+            <tr><td>Cinnamon Roll</td><td>Pastry</td><td>1,500 KZT</td><td>Daily</td></tr>
+            <tr><td>Chocolate Cake</td><td>Cake</td><td>9,500 KZT</td><td>Pre-order</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light-section text-center">
+    <div class="container">
+      <h2>Explore Our Bakery</h2>
+      <div class="btn-group">
+        <a href="index.html" class="btn btn-primary">Home</a>
+        <a href="gallery.html" class="btn btn-primary">Gallery</a>
+        <a href="order.html" class="btn btn-primary">Order</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="team-box">
+        <h2>About the Team Member</h2>
+        <h3>SRAZHDIN YASMIN</h3>
+        <p>I was responsible for creating the Home and Menu pages. My work included page structure, navigation, menu cards, product information and the bakery pricing table.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <p><strong>Sweet Crumb Bakery Team</strong></p>
+    <p>NURLANKYZY ZHANSHUAK | SRAZHDIN YASMIN | URINBAY NURGUL</p>
+    <p>Front-End Development — Assignment 6</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
