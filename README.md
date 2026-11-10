@@ -6,7 +6,7 @@ Sweet Crumb Bakery is a responsive bakery ordering website developed as part of 
 
 The website allows users to explore bakery products, browse the gallery, view product information, and interact with order and contact forms.
 
-For Assignment 6, we extended our previous project by implementing interactive features using **jQuery**, while maintaining the existing HTML, CSS, Bootstrap, and JavaScript functionality.
+For Endterm Project, we extended our previous project by implementing interactive features using **jQuery**, while maintaining the existing HTML, CSS, Bootstrap, and JavaScript functionality.
 
 ## Technologies Used
 
@@ -27,7 +27,7 @@ For Assignment 6, we extended our previous project by implementing interactive f
 5. **Order** — order form with input validation, loading spinner, and notifications.
 6. **Contact** — contact information, contact form, email copying, and notifications.
 
-## Assignment 6 — jQuery Features
+## Endterm Project — jQuery Features
 
 | Task | Feature | Description |
 |---|---|---|
@@ -98,7 +98,7 @@ Live website: *Add the GitHub Pages URL after deployment.*
 
 ## Conclusion
 
-In Assignment 6, we used jQuery to improve user interaction, simplify DOM manipulation, and add animations and feedback to the bakery website.
+In this project, we used jQuery to improve user interaction, simplify DOM manipulation, and add animations and feedback to the bakery website.
 
 The project demonstrates how jQuery can be integrated into an existing website without removing its previous functionality.
 
