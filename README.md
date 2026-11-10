@@ -1,4 +1,4 @@
-# Sweet Crumb Bakery — Assignment 6
+# Sweet Crumb Bakery — Endterm Project
 
 ## Project Overview
 
